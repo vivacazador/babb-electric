@@ -3968,3 +3968,16 @@
 			}
 
 	}
+	.about-video {
+    width: 100%; /* Full width of the column */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+    @media (max-width: 768px) {
+        .about-video {
+            max-width: 100%; /* Ensure responsiveness on smaller screens */
+            height: auto;
+        }
+    }
