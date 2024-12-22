@@ -3223,6 +3223,7 @@
 				background: #fff;
 				color: #666 !important;
 			}
+/* Mobile Styles */
 @media (max-width: 768px) {
     #banner {
         height: auto; /* Allow the banner height to adjust */
@@ -3255,7 +3256,6 @@
         font-size: 1rem; /* Maintain readable font size */
     }
 }
-
 /* Main */
 
 	#main {
