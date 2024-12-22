@@ -29,22 +29,20 @@
 				</nav>
 			</header>
 
-			<!-- Banner -->
-			<section id="banner">
-				<!-- Background Video -->
-				<video autoplay muted loop playsinline id="bg-video">
-					<source src="images/bgvid1.mp4" type="video/mp4">
-					Your browser does not support the video tag.
-				</video>
-
-				<!-- Content -->
-				<img src="images/cblogo4.png" alt="CB Electric Logo">
-				<h3>We Are An Innovative Electrical Team For Projects Large and Small</h3>
-				<ul class="actions special">
-					<li><a href="contact.html" class="button primary">Contact Our Team</a></li>
-					<li><a href="about.html" class="button">Learn More About Us</a></li>
-				</ul>
-			</section>
+			 <!-- Banner -->
+            <section id="banner">
+                <!-- Background Video -->
+                <video id="preloader-vid" autoplay muted loop playsinline>
+                    <source src="images/bgvid1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <img src="images/cblogo4.png" alt="CB Electric Logo" style="max-width: 1200px; margin: 0 auto; display: block;">
+                <h3>We Are An Innovative Electrical Team For Projects Large and Small</h3>
+                <ul class="actions special">
+                    <li><a href="contact.html" class="button primary">Contact Our Team</a></li>
+                    <li><a href="about.html" class="button">Learn More About Us</a></li>
+                </ul>
+            </section>
 
 			<!-- Main -->
 			<section id="main" class="container">
@@ -144,6 +142,27 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+<!-- START: Mobile Autoplay Video Fix -->
+        <script>
+            // Adjust playback rate for specific video (optional)
+            var vid = document.getElementById("preloader-vid");
+            if (vid) {
+                vid.playbackRate = .9; // Adjust the playback speed
+            }
 
-	</body>
+            // Ensure autoplay, muted, and playsinline attributes are set for all videos
+            for (const video of document.getElementsByTagName("video")) {
+                video.setAttribute("playsinline", ""); // Ensures the video doesn't enter fullscreen on mobile
+                video.setAttribute("muted", ""); // Mutes the video (required for autoplay on mobile)
+                video.setAttribute("autoplay", ""); // Autoplay
+                video.setAttribute("loop", ""); // Loop the video
+
+                // Attempt to play the video
+                video.play().catch((err) => {
+                    console.warn("Autoplay failed:", err);
+                });
+            }
+        </script>
+        <!-- END: Mobile Autoplay Video Fix -->
+    </body>
 </html>
