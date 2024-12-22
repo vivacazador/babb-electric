@@ -2364,119 +2364,65 @@
 				}
 
 /* Icon */
+.features-row section {
+    text-align: center;
+    margin: 20px 0;
+}
 
-	.icon {
-		text-decoration: none;
-		border-bottom: none;
-		position: relative;
-	}
+.features-row section .icon {
+    display: inline-block;
+    width: 80px; /* Adjust the size */
+    height: 80px;
+    line-height: 80px;
+    background-color: #fff8e6; /* Light orange tint for softer contrast */
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #333; /* Text/icon color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-		.icon:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			display: inline-block;
-			font-style: normal;
-			font-variant: normal;
-			text-rendering: auto;
-			line-height: 1;
-			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
-			font-weight: 400;
-		}
+.features-row section:hover .icon {
+    background-color: #FFA500; /* Your light orange */
+    color: white; /* Match logo aesthetic */
+}
 
-		.icon > .label {
-			display: none;
-		}
 
-		.icon:before {
-			line-height: inherit;
-		}
+            /* Image */
 
-		.icon.solid:before {
-			font-weight: 900;
-		}
+                .image {
+                    border-radius: 6px;
+                    border: 0;
+                    display: inline-block;
+                    position: relative;
+                }
 
-		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
-		}
+                    .image img {
+                        border-radius: 6px;
+                        display: block;
+                    }
 
-		.icon.major {
-			background: #666;
-			border-radius: 100%;
-			color: #ffffff;
-			cursor: default;
-			display: inline-block;
-			height: 5.5em;
-			line-height: 5.5em;
-			margin: 0 0 2em 0;
-			width: 5.5em;
-		}
+                    .image.left {
+                        float: left;
+                        padding: 0 1.5em 1em 0;
+                        top: 0.25em;
+                    }
 
-			.icon.major:before {
-				font-size: 2.5em;
-			}
+                    .image.right {
+                        float: right;
+                        padding: 0 0 1em 1.5em;
+                        top: 0.25em;
+                    }
 
-			.icon.major.accent1 {
-				background: #666;
-				color: #ffffff;
-			}
+                    .image.fit {
+                        display: block;
+                        margin: 0 0 2em 0;
+                        width: 100%;
+                    }
 
-			.icon.major.accent2 {
-				background: #e89980;
-				color: #ffffff;
-			}
-
-			.icon.major.accent3 {
-				background: #7fcdb8;
-				color: #ffffff;
-			}
-
-			.icon.major.accent4 {
-				background: #90b0ba;
-				color: #ffffff;
-			}
-
-			.icon.major.accent5 {
-				background: #e5cb95;
-				color: #ffffff;
-			}
-
-/* Image */
-
-	.image {
-		border-radius: 6px;
-		border: 0;
-		display: inline-block;
-		position: relative;
-	}
-
-		.image img {
-			border-radius: 6px;
-			display: block;
-		}
-
-		.image.left {
-			float: left;
-			padding: 0 1.5em 1em 0;
-			top: 0.25em;
-		}
-
-		.image.right {
-			float: right;
-			padding: 0 0 1em 1.5em;
-			top: 0.25em;
-		}
-
-		.image.fit {
-			display: block;
-			margin: 0 0 2em 0;
-			width: 100%;
-		}
-
-			.image.fit img {
-				display: block;
-				width: 100%;
-			}
+                        .image.fit img {
+                            display: block;
+                            width: 100%;
+                        }
 
 /* List */
 
@@ -2847,24 +2793,24 @@
 		input[type="submit"].primary,
 		input[type="reset"].primary,
 		input[type="button"].primary,
-		.button.primary {
-			background-color: #e89980;
-			color: #ffffff !important;
-		}
 
-			input[type="submit"].primary:hover,
-			input[type="reset"].primary:hover,
-			input[type="button"].primary:hover,
-			.button.primary:hover {
-				background-color: #ecaa96;
-			}
+        #cta .button.primary {
+        display: inline-flex; /* Use flexbox for centering */
+        align-items: center; /* Vertically center text */
+        justify-content: center; /* Horizontally center text */
+        text-align: center; /* Ensure text alignment */
+        background-color: #666;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        width: fit-content; /* Avoid unnecessary stretching */
+    }
 
-			input[type="submit"].primary:active,
-			input[type="reset"].primary:active,
-			input[type="button"].primary:active,
-			.button.primary:active {
-				background-color: #e4886a;
-			}
+        #cta .button.primary:hover {
+            background-color: ##ffa500cc; /* Darker blue on hover */
+        }
+
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
 		input[type="reset"].disabled,
@@ -2930,29 +2876,28 @@
 		}
 	}
 
-	#header {
-		background: #444;
-		color: #bbb;
-		cursor: default;
-		height: 3.25em;
-		left: 0;
-		line-height: 3.25em;
-		position: fixed;
-		top: 0;
-		width: 100%;
-		z-index: 10000;
-	}
+#header {
+    background-color: #ffa500cc; /* Keeps the light orange background */
+    color: white; /* Text color for better contrast */
+    cursor: default;
+    height: 5.5em; /* Adjust header height */
+    line-height: 5.5em; /* Center text vertically */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center content */
+    justify-content: space-between; /* Spread out logo and navigation */
+    padding: 0 1.5em; /* Add some padding on the sides */
+}
+
 
 		#header h1 {
-			color: inherit;
-			height: inherit;
-			left: 1.25em;
-			line-height: inherit;
-			margin: 0;
-			padding: 0;
-			position: absolute;
-			top: 0;
-		}
+            font-size: 1.5rem; /* Increase logo text size */
+            margin: 0; /* Remove default margins */
+        }
 
 			#header h1 a {
 				color: #fff;
@@ -3023,7 +2968,7 @@
 		#header .button {
 			background-color: transparent;
 			box-shadow: inset 0 0 0 2px #999;
-			color: #fff;
+			color: ##ffa500;
 		}
 
 			#header input[type="submit"]:hover,
@@ -3065,7 +3010,7 @@
 			-ms-animation: none;
 			animation: none;
 			background: none;
-			color: rgba(255, 255, 255, 0.75);
+			color: #ffa500;
 			position: absolute;
 		}
 
@@ -3129,7 +3074,7 @@
 			}
 
 			.dropotron li.active > a, .dropotron li.active > span, .dropotron li:hover > a, .dropotron li:hover > span {
-				background: #e89980;
+				background: #ffa500;
 				color: #ffffff;
 			}
 
@@ -3160,17 +3105,34 @@
 
 /* Banner */
 
-	#banner {
-		background-attachment: scroll,							fixed;
-		background-color: #666;
-		background-image: url("images/overlay.png"), url("../../images/banner.jpg");
-		background-position: top left,						center center;
-		background-repeat: repeat,							no-repeat;
-		background-size: auto,							cover;
-		color: #fff;
-		padding: 12em 0 20em 0;
-		text-align: center;
-	}
+        #banner {
+            position: relative; /* Ensure proper positioning */
+            height: 850px; /* Adjust as needed */
+            overflow: hidden; /* Prevent content from spilling outside */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 20.25em; /* Match header height */
+            }
+
+        #banner video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the video scales properly */
+            z-index: -1; /* Send the video to the background */
+        }
+        #banner img {
+            position: relative;
+            z-index: 1; /* Keep the logo above the video */
+            max-width: 900px; /* Adjust the size of the logo */
+            margin-bottom: -10px;
+        }
 
 		#banner :last-child {
 			margin-bottom: 0;
@@ -3181,12 +3143,50 @@
 		}
 
 		#banner h2 {
-			font-size: 3.5em;
+			font-size: 5.5em;
 			line-height: 1em;
 			margin: 0 0 0.5em 0;
 			padding: 0;
 		}
+       #banner h3 {
+            position: relative;
+            z-index: 1; /* Ensure it layers above the video */
+            font-size: 2.5rem; /* Adjust font size as needed */
+            color: white; /* Keep text color */
+            text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8); /* Add a shadow */
+            margin-bottom: 20px;
+        }
 
+        #banner p {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        #banner ul.actions {
+        position: relative;
+        z-index: 1; /* Keep buttons above the video */
+        margin-top: 15px;
+    }
+        #banner ul.actions li a {
+            display: flex; /* Use flexbox */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            padding: 12px 20px; /* Adjust padding */
+            font-size: 1rem; /* Ensure consistent font size */
+            text-align: center; /* Align text */
+            background-color: #ffa500; /* Button background color */
+            color: white; /* Button text color */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Smooth corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow */
+            transition: all 0.3s ease; /* Add hover animation */
+        }
+
+        #banner ul.actions li a:hover {
+            background-color: #cc8400; /* Slightly darker hover color */
+            transform: scale(1.05); /* Subtle zoom effect */
+        }
 		#banner p {
 			font-size: 1.25em;
 			margin-bottom: 1.75em;
@@ -3223,6 +3223,38 @@
 				background: #fff;
 				color: #666 !important;
 			}
+@media (max-width: 768px) {
+    #banner {
+        height: auto; /* Allow the banner height to adjust */
+        padding-top: 6em; /* Add extra space for mobile header */
+        text-align: center; /* Ensure content stays centered */
+    }
+
+    #banner img {
+        max-width: 80%; /* Scale down the logo */
+        margin-bottom: 15px;
+    }
+
+    #banner h3 {
+        font-size: 3rem; /* Adjust font size for smaller screens */
+        margin-bottom: 10px;
+    }
+
+    #banner ul.actions {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+    }
+
+    #banner ul.actions li {
+        margin-bottom: 10px; /* Add space between buttons */
+    }
+
+    #banner ul.actions li a {
+        width: 100%; /* Full width for mobile */
+        padding: 12px 15px; /* Adjust padding for smaller screens */
+        font-size: 1rem; /* Maintain readable font size */
+    }
+}
 
 /* Main */
 
@@ -3252,7 +3284,6 @@
 	body.landing #main {
 		margin-top: -14em;
 	}
-
 /* Footer */
 
 	#footer {
@@ -3303,11 +3334,12 @@
 /* CTA */
 
 	#cta {
-		background: #e89980;
-		color: #f9e6df;
-		padding: 3.5em 0 4em 0;
-		text-align: center;
-	}
+    background-color: #ffa500cc; /* Match header */
+    color: white;
+    padding: 2em;
+    text-align: center;
+    border-radius: 10px;
+}
 
 		#cta h2, #cta h3, #cta h4, #cta h5, #cta h6 {
 			color: inherit;
