@@ -31,12 +31,15 @@
 
 			 <!-- Banner -->
             <section id="banner">
-                <!-- Background Video -->
-                <video id="preloader-vid" autoplay muted loop playsinline>
+                <!-- Background Video-->
+                <video id="bg-video" autoplay muted loop playsinline>
                     <source src="images/bgvid1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <img src="images/cblogo4.png" alt="CB Electric Logo" >
+				<!-- Fallback Image -->
+				 <img src="images/bgfb.jpg" alt="Background Fallback Image" class="fallback-image">
+
+                <img src="images/cblogo4.png" alt="CB Electric Logo" class="logo">
                 <h3>We Are An Innovative Electrical Team For Projects Large and Small</h3>
                 <ul class="actions special">
                     <li><a href="contact.html" class="button primary">Contact Our Team</a></li>
@@ -143,19 +146,30 @@
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 		<!-- START: Mobile Autoplay Video Fix -->
-				<script>
-		// Select the video element
-		const videos = document.querySelectorAll("#bg-video");
+		<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const video = document.getElementById("bg-video"); // Ensure the id matches your video tag
+			const fallbackImage = document.querySelector(".fallback-image");
 
-		// Ensure autoplay, playsinline, and muted attributes are set
-		for (const video of videos) {
-			video.setAttribute("playsinline", "");
-			video.setAttribute("muted", "");
-			video.play().catch((err) => {
-				console.error("Autoplay failed: ", err);
-			});
-		}
+			if (video) {
+				video.setAttribute("playsinline", "");
+				video.setAttribute("muted", "");
+
+				video.play().then(() => {
+					console.log("Video is playing");
+					// Hide fallback image when the video starts playing
+					if (fallbackImage) {
+						fallbackImage.style.display = "none";
+					}
+				}).catch((err) => {
+					console.error("Autoplay failed: ", err);
+					// Show fallback image if video fails
+					if (fallbackImage) {
+						fallbackImage.style.display = "block";
+					}
+				});
+			}
+		});
 		</script>
-        <!-- END: Mobile Autoplay Video Fix -->
     </body>
 </html>
