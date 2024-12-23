@@ -5,13 +5,68 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			@media (max-width: 768px) {
+				header h2 {
+					font-size: 1.6em; /* Slightly smaller for mobile */
+					text-align: center; /* Center-align text for better readability */
+					margin-bottom: 10px;
+				}
+				header h3 {
+					text-align: center; /* Align text to the center */
+					font-size: 1.8em; /* Optional: Adjust font size if needed */
+					margin: 20px 0; /* Add some spacing around the header */
+				}
+				header p {
+					font-size: 1rem; /* Adjust paragraph font size */
+					line-height: 1.5em; /* Improve line spacing */
+					margin-top: 5px;
+					text-align: center; /* Ensure the paragraph is centered */
+				}
+
+				ul {
+					padding-left: 20px; /* Add some padding for better spacing on mobile */
+				}
+
+				ul li {
+					font-size: 0.95rem; /* Slightly smaller font size for better readability */
+					line-height: 1.4em;
+				}
+
+				.carousel {
+					display: block; /* Ensure carousel adapts to the screen */
+					overflow-x: auto; /* Allow horizontal scrolling for smaller devices */
+					padding: 10px 0; /* Add padding for a cleaner look */
+					margin: 0 auto; /* Center-align the carousel */
+				}
+
+				.carousel-item {
+					min-width: 250px; /* Adjust item width for smaller screens */
+					margin: 10px auto; /* Center items vertically and horizontally */
+				}
+
+				.carousel-item img {
+					width: 100%; /* Ensure images fit the container */
+					border-radius: 6px; /* Maintain the rounded corners */
+				}
+
+				.box.special ul {
+					list-style-type: disc; /* Use standard bullets for consistency */
+					padding-left: 20px;
+				}
+
+				.box.special ul li {
+					margin-bottom: 10px; /* Add spacing between items */
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
 			<header id="header">
-				<h1><a href="index.html">CB</a> ELECTRIC</h1>
+				<h1><a href="index.html">CB ELECTRIC</h1></a>
 				<nav id="nav">
 					<ul>
 						<li>
@@ -19,6 +74,7 @@
 							<ul>
 								<li><a href="residential.html">Residential</a></li>
 								<li><a href="commercial.html">Commercial</a></li>
+								<li><a href="locations.html">Locations We Service</a></li>
 								<li><a href="about.html">Who We Are</a></li>
 							</ul>
 						</li>
@@ -30,34 +86,53 @@
 			<!-- Main -->
 			<section id="main" class="container large">
 				<header>
-					<h2>Residential Projects</h2>
-					<p>Take a look at some of the residential projects we have completed, showcasing our commitment to quality and safety.</p>
+					<h2>Residential Electrical Services</h2>
+					<p>Discover our wide range of expert residential electrical services, designed to keep your home safe, efficient, and well-lit.</p>
 				</header>
 
-				<div class="carousel" style="display: flex; overflow-x: scroll;">
-					<div class="carousel-item" style="min-width: 300px; margin: 0 15px; text-align: center;">
-						<img src="images/resi1.jpg" alt="Project 1" style="width: 100%; border-radius: 6px;" />
-						<p><strong>Home Rewiring</strong><br />
-						Updated electrical systems and lighting for a modern kitchen design.</p>
-					</div>
+				<section class="box special">
+					<header>
+						<h3>Our Residential Services Include:</h3>
+					</header>
+					<ul>
+						<li><strong>Panel Upgrades:</strong> Replace outdated electrical panels for improved capacity and safety.</li>
+						<li><strong>Lighting Installation:</strong> Enhance your home's ambiance with indoor and outdoor lighting solutions.</li>
+						<li><strong>Electrical Repairs:</strong> Fast and reliable fixes for faulty wiring, outlets, and switches.</li>
+						<li><strong>Ceiling Fan Installation:</strong> Professional installation to keep your home comfortable year-round.</li>
+						<li><strong>Whole-Home Surge Protection:</strong> Safeguard your appliances and electronics from power surges.</li>
+						<li><strong>Electric Vehicle Charging Stations:</strong> Install efficient and safe EV chargers at your home.</li>
+						<li><strong>Smart Home Wiring:</strong> Integrate modern smart systems for enhanced convenience and control.</li>
+					</ul>
+				</section>
 
-					<div class="carousel-item" style="min-width: 300px; margin: 0 15px; text-align: center;">
-						<img src="images/resi2.jpg" alt="Project 3" style="width: 100%; border-radius: 6px;" />
-						<p><strong>Outdoor Lighting</strong><br />
-						Installation of energy-efficient outdoor lighting for enhanced safety and aesthetics.</p>
+				<!-- Carousel -->
+				<section>
+					<header>
+						<h3>Completed Residential Projects</h3>
+						<p>Take a look at some of the residential projects we have completed, showcasing our commitment to quality and safety.</p>
+					</header>
+
+					<div class="carousel" style="display: flex; overflow-x: scroll;">
+						<div class="carousel-item" style="min-width: 300px; margin: 0 15px; text-align: center;">
+							<img src="images/resi1.jpg" alt="Project 1" style="width: 100%; border-radius: 6px;" />
+							<p><strong>Home Rewiring</strong><br />
+							Updated electrical systems and lighting for a modern kitchen design.</p>
+						</div>
+
+						<div class="carousel-item" style="min-width: 300px; margin: 0 15px; text-align: center;">
+							<img src="images/resi2.jpg" alt="Project 2" style="width: 100%; border-radius: 6px;" />
+							<p><strong>Outdoor Lighting</strong><br />
+							Installation of energy-efficient outdoor lighting for enhanced safety and aesthetics.</p>
+						</div>
 					</div>
-				</div>
+				</section>
 			</section>
 
 			<!-- Footer -->
 			<footer id="footer">
-				<!---<ul class="icons">
-					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-					</ul> -->
 				<ul class="copyright">
-					<li>Built by <a href="http://ondasoftware.com">Onda Software Solutions</a>. </li><li> All rights reserved.</li>
+					<li>Built by <a href="http://ondasoftware.com">Onda Software Solutions</a>.</li>
+					<li>All rights reserved.</li>
 				</ul>
 			</footer>
 

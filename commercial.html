@@ -1,17 +1,73 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Commercial - Babb Electric</title>
+		<title>Commercial Services - Babb Electric</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			@media (max-width: 768px) {
+				header h2 {
+					font-size: 1.6em; /* Slightly smaller for mobile */
+					text-align: center; /* Center-align text for better readability */
+					margin-bottom: 10px;
+				}
+				header h3 {
+					text-align: center; /* Align text to the center */
+					font-size: 1.8em; /* Optional: Adjust font size if needed */
+					margin: 20px 0; /* Add some spacing around the header */
+				}
+				header p {
+					font-size: 1rem; /* Adjust paragraph font size */
+					line-height: 1.5em; /* Improve line spacing */
+					margin-top: 5px;
+					text-align: center; /* Ensure the paragraph is centered */
+				}
+
+				ul {
+					padding-left: 20px; /* Add some padding for better spacing on mobile */
+				}
+
+				ul li {
+					font-size: 0.95rem; /* Slightly smaller font size for better readability */
+					line-height: 1.4em;
+				}
+
+				.carousel {
+					display: block; /* Ensure carousel adapts to the screen */
+					overflow-x: auto; /* Allow horizontal scrolling for smaller devices */
+					padding: 10px 0; /* Add padding for a cleaner look */
+					margin: 0 auto; /* Center-align the carousel */
+				}
+
+				.carousel-item {
+					min-width: 250px; /* Adjust item width for smaller screens */
+					margin: 10px auto; /* Center items vertically and horizontally */
+				}
+
+				.carousel-item img {
+					width: 100%; /* Ensure images fit the container */
+					border-radius: 6px; /* Maintain the rounded corners */
+				}
+
+				.box.special ul {
+					list-style-type: disc; /* Use standard bullets for consistency */
+					padding-left: 20px;
+				}
+
+				.box.special ul li {
+					margin-bottom: 10px; /* Add spacing between items */
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
 
-			<<!-- Header -->
+			<!-- Header -->
+			<!-- Header -->
 			<header id="header">
-				<h1><a href="index.html">CB</a> ELECTRIC</h1>
+				<h1><a href="index.html">CB ELECTRIC</h1></a>
 				<nav id="nav">
 					<ul>
 						<li>
@@ -19,6 +75,7 @@
 							<ul>
 								<li><a href="residential.html">Residential</a></li>
 								<li><a href="commercial.html">Commercial</a></li>
+								<li><a href="locations.html">Locations We Service</a></li>
 								<li><a href="about.html">Who We Are</a></li>
 							</ul>
 						</li>
@@ -26,43 +83,64 @@
 					</ul>
 				</nav>
 			</header>
+
 			<!-- Main -->
 			<section id="main" class="container large">
 				<header>
-					<h2>Commercial Projects</h2>
-					<p>Explore some of our commercial projects and see our expertise in action.</p>
+					<h2>Commercial Electrical Services</h2>
+					<p>Providing expert industrial and commercial electrical solutions to power your business.</p>
 				</header>
 
-				<div class="carousel" style="display: flex; overflow-x: scroll;">
-					<div class="carousel-item" style="min-width: 300px; margin: 0 15px; text-align: center;">
-						<img src="images/commicbd.jpg" alt="Project 1" style="width: 100%; border-radius: 6px;" />
-						<p><strong>CBD Distillery Installation</strong><br />
-						Installed and wired a new CBD distillation facility. </p>
-					</div>
+				<section class="box special">
+					<header>
+						<h3>Our Commercial Services Include:</h3>
+					</header>
+					<ul>
+						<li><strong>Industrial Motor Controls:</strong> Specializing in designing, installing, and maintaining motor control systems to ensure efficiency and reliability in your operations.</li>
+						<li><strong>Electrical Panel Upgrades:</strong> Upgrading electrical panels to handle increased power demands for industrial and commercial facilities.</li>
+						<li><strong>Lighting Solutions:</strong> Installing energy-efficient lighting systems for warehouses, offices, and outdoor spaces.</li>
+						<li><strong>Power Distribution:</strong> Setting up reliable power distribution systems for large-scale industrial operations.</li>
+						<li><strong>Generator Installation:</strong> Installing backup generators to ensure uninterrupted power during outages.</li>
+						<li><strong>Data and Network Cabling:</strong> Structured cabling solutions for seamless communication and data transfer in your facility.</li>
+						<li><strong>Electrical Maintenance:</strong> Providing regular maintenance to prevent downtime and ensure compliance with safety standards.</li>
+						<li><strong>EV Charging Stations:</strong> Installing commercial-grade electric vehicle charging stations for businesses and fleets.</li>
+					</ul>
+				</section>
 
-					<div class="carousel-item" style="min-width: 300px; margin: 0 15px; text-align: center;">
-						<img src="images/commhp.jpg" alt="Project 2" style="width: 100%; border-radius: 6px;" />
-						<p><strong>Hay Press Motor</strong><br />
-						Installation of a 250 HP electric motor for a hay press.</p>
-					</div>
+				<!-- Carousel -->
+				<section>
+					<header>
+						<h3>Completed Commercial Projects</h3>
+						<p>Take a look at some of the commercial and industrial projects we have completed, showcasing our expertise in delivering tailored solutions.</p>
+					</header>
 
-					<div class="carousel-item" style="min-width: 300px; margin: 0 15px; text-align: center;">
-						<img src="images/commcb.jpg" alt="Project 3" style="width: 100%; border-radius: 6px;" />
-						<p><strong>Motor Control Cabinet</strong><br />
-						Electrical wiring and panel installation for an industrial electrical motor.</p>
+					<div class="carousel" style="display: flex; overflow-x: scroll;">
+						<div class="carousel-item" style="min-width: 300px; margin: 0 15px; text-align: center;">
+							<img src="images/commicbd.jpg" alt="Project 1" style="width: 100%; border-radius: 6px;" />
+							<p><strong>CBD Distillery Installation</strong><br />
+							Installed and wired a new CBD distillation facility.</p>
+						</div>
+
+						<div class="carousel-item" style="min-width: 300px; margin: 0 15px; text-align: center;">
+							<img src="images/commhp.jpg" alt="Project 2" style="width: 100%; border-radius: 6px;" />
+							<p><strong>Hay Press Motor</strong><br />
+							Installation of a 250 HP electric motor for a hay press.</p>
+						</div>
+
+						<div class="carousel-item" style="min-width: 300px; margin: 0 15px; text-align: center;">
+							<img src="images/commcb.jpg" alt="Project 3" style="width: 100%; border-radius: 6px;" />
+							<p><strong>Motor Control Cabinet</strong><br />
+							Electrical wiring and panel installation for an industrial electrical motor.</p>
+						</div>
 					</div>
-				</div>
+				</section>
 			</section>
 
 			<!-- Footer -->
 			<footer id="footer">
-				<!---<ul class="icons">
-					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-					</ul> -->
 				<ul class="copyright">
-					<li>Built by <a href="http://ondasoftware.com">Onda Software Solutions</a>. </li><li> All rights reserved.</li>
+					<li>Built by <a href="http://ondasoftware.com">Onda Software Solutions</a>.</li>
+					<li>All rights reserved.</li>
 				</ul>
 			</footer>
 
