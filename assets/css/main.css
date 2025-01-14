@@ -3984,7 +3984,8 @@
 /* About Page Video Styling */
 .video-container {
     position: relative;
-    max-width: 600px; /* Limit the width to portrait-style */
+    max-width: 550px; /* Limit the width to portrait-style */
+    max-height: 400px; /* Restrict the height */
     margin: 0 auto; /* Center the video container */
     border-radius: 6px;
     overflow: hidden;
@@ -3994,7 +3995,8 @@
 .video-container video,
 .video-container img {
     width: 100%;
-    height: auto;
+    height: 100%; /* Fill the container's height */
+    object-fit: cover; /* Maintain aspect ratio while filling */
     display: block;
     border-radius: 6px;
 }
