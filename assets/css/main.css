@@ -3463,7 +3463,7 @@
 		/* Basic */
 
 			body, input, select, textarea {
-				font-size: 11pt;
+				font-size: 18pt;
 			}
 
 		/* Header */
@@ -3491,7 +3491,7 @@
 		/* Basic */
 
 			body, input, select, textarea {
-				font-size: 11pt;
+				font-size: 18pt;
 			}
 
 	}
@@ -3511,7 +3511,7 @@
 			}
 
 			body, input, select, textarea {
-				font-size: 11pt;
+				font-size: 18pt;
 			}
 
 			h2 br, h3 br, h4 br, h5 br, h6 br {
@@ -3736,7 +3736,7 @@
 		/* Basic */
 
 			body, input, select, textarea {
-				font-size: 11pt;
+				font-size: 18pt;
 			}
 
 			h2 {
@@ -3872,7 +3872,7 @@
 			}
 
 			body, input, select, textarea {
-				font-size: 11pt;
+				font-size: 18pt;
 			}
 
 		/* Section/Article */
@@ -3981,3 +3981,77 @@
             height: auto;
         }
     }
+/* About Page Video Styling */
+.video-container {
+    position: relative;
+    max-width: 600px; /* Limit the width to portrait-style */
+    margin: 0 auto; /* Center the video container */
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-container video,
+.video-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+/* Text Content */
+#main p, #main ul {
+    max-width: 600px; /* Match the video width */
+    margin: 20px auto; /* Center-align the text */
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #444;
+}
+
+#main ul {
+    padding-left: 20px;
+}
+
+#main ul li {
+    margin-bottom: 10px;
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    .video-container {
+        max-width: 90%; /* Make the video fit better on smaller screens */
+    }
+
+    #main p, #main ul {
+        max-width: 90%; /* Match the container width */
+        font-size: 0.95rem;
+    }
+}#main p, #main ul {
+    max-width: 800px; /* Limit the width of text sections */
+    margin: 20px auto; /* Center-align text */
+    line-height: 1.6; /* Improve readability */
+    font-size: 1rem; /* Maintain a clean font size */
+    color: #444; /* Keep it visually clean */
+}
+
+#main ul {
+    padding-left: 20px; /* Add padding for lists */
+}
+
+#main ul li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    #main p, #main ul {
+        max-width: 90%; /* Allow text to fit on smaller screens */
+        font-size: 0.95rem; /* Adjust font size for mobile */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #nav ul li a {
+        font-size: 26px; /* Adjust size as needed */
+    }
+}

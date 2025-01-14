@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>About Us - Babb Electric</title>
+		<title>About Us - CB Electric</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -11,15 +11,16 @@
 
 			<!-- Header -->
 			<header id="header">
-				<h1><a href="index.html">CB ELECTRIC</h1></a>
+				<h1><a href="index.html">CB</a> ELECTRIC</h1>
 				<nav id="nav">
 					<ul>
+						<li><a href="index.html">Home</a></li>
 						<li>
-							<a href="#" class="icon fas fa-angle-down">Our Projects</a>
+							<a href="#" class="icon fas fa-angle-down">Learn More</a>
 							<ul>
+								<li><a href="locations.html">Locations We Service</a></li>
 								<li><a href="residential.html">Residential</a></li>
 								<li><a href="commercial.html">Commercial</a></li>
-								<li><a href="locations.html">Locations We Service</a></li>
 								<li><a href="about.html">Who We Are</a></li>
 							</ul>
 						</li>
@@ -29,50 +30,36 @@
 			</header>
 
 			<!-- Main -->
-			<section id="main" class="container medium">
+			<section id="main" class="container">
 				<header>
-					<h2>About CB Electric</h2>
-					<p>A Legacy of Excellence in Electrical Services</p>
+					<h2>About Us</h2>
+					<p>Learn more about our history, mission, and the services we proudly offer.</p>
 				</header>
-				<div class="box">
-					<div class="row">
-						<!-- Video Section -->
-						<div class="col-6 col-12-mobilep">
-							<video class="about-video" autoplay muted loop playsinline>
-								<source src="images/cbabout.mp4" type="video/mp4">
-								Your browser does not support the video tag.
-							</video>
-						</div>
 
-						<!-- Text Content Section -->
-						<div class="col-6 col-12-mobilep">
-							<p>Babb Electric was founded by Charlie Babb, a proud graduate of Cal Poly San Luis Obispo. With roots in Brawley, California, and Mission Bay, San Diego, our company has grown to serve a wide array of clients and industries. Starting with small household projects and expanding to large-scale industrial facilities, our mission has always been to provide reliable, high-quality electrical services.</p>
-
-							<p>Our team has experience in a variety of industries, including:</p>
-							<ul>
-								<li>Industrial agriculture facilities such as produce coolers and hay presses</li>
-								<li>Marine electrical systems</li>
-								<li>Everyday household electrical needs</li>
-							</ul>
-
-							<p>At Babb Electric, we are proud to combine technical expertise with a customer-focused approach, ensuring that every project is completed to the highest standards. Whether it's a residential repair, a commercial installation, or an industrial upgrade, our team is here to power your future.</p>
-						</div>
-					</div>
+				<div class="video-container">
+					<video id="about-video" class="about-video" autoplay muted loop playsinline>
+						<source src="images/cbabout.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					<img src="images/fallback.jpg" alt="Fallback Image" class="fallback-image" style="display: none; width: 100%; border-radius: 6px;">
 				</div>
+
+				<p>CB Electric was founded by Charlie Babb, a proud graduate of Cal Poly San Luis Obispo. With roots in Brawley, California, and Mission Bay, San Diego, our company has grown to serve a wide array of clients and industries. Starting with small household projects and expanding to large-scale industrial facilities, our mission has always been to provide reliable, high-quality electrical services.</p>
+
+				<ul>
+					<li><strong>Industrial Agriculture:</strong> Supporting produce coolers and hay presses with expert electrical solutions.</li>
+					<li><strong>Marine Electrical Systems:</strong> Ensuring reliability for marine vessels and systems.</li>
+					<li><strong>Residential Services:</strong> Handling everything from small repairs to major upgrades in homes.</li>
+				</ul>
 			</section>
 
 			<!-- Footer -->
 			<footer id="footer">
-				<!---<ul class="icons">
-					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-					</ul> -->
 				<ul class="copyright">
-					<li>Built by <a href="http://ondasoftware.com">Onda Software Solutions</a>. </li><li> All rights reserved.</li>
+					<li>Built by <a href="http://ondasoftware.com">Onda Software Solutions</a>.</li>
+					<li>All rights reserved.</li>
 				</ul>
 			</footer>
-
 
 		</div>
 
@@ -84,6 +71,27 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const video = document.getElementById("about-video");
+				const fallbackImage = document.querySelector(".fallback-image");
 
+				if (video) {
+					video.setAttribute("playsinline", "");
+					video.setAttribute("muted", "");
+
+					video.play().then(() => {
+						if (fallbackImage) {
+							fallbackImage.style.display = "none";
+						}
+					}).catch((err) => {
+						console.error("Autoplay failed: ", err);
+						if (fallbackImage) {
+							fallbackImage.style.display = "block";
+						}
+					});
+				}
+			});
+		</script>
 	</body>
 </html>
