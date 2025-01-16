@@ -3152,8 +3152,8 @@
         #banner .logo {
             position: relative;
             z-index: 1; /* Keep it above the video or image */
-            max-width: 300px; /* Set a reasonable max width for the logo */
-            margin-bottom: 20px; /* Adjust spacing below the logo */
+            max-width: 400px; /* Set a reasonable max width for the logo */
+            margin-bottom: 0px; /* Adjust spacing below the logo */
         }
         #banner img {
             position: relative;
@@ -3272,8 +3272,8 @@
 
     /* Logo */
     #banner .logo {
-        max-width: 80%; /* Scale the logo down for mobile */
-        margin-bottom: 20px; /* Space below the logo */
+        max-width: 120%; /* Scale the logo down for mobile */
+        margin-bottom: 0px; /* Space below the logo */
     }
 
     #banner h3 {

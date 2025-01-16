@@ -15,15 +15,16 @@
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">Who We Are</a></li>
 						<li>
-							<a href="#" class="icon fas fa-angle-down">Learn More</a>
+							<a href="#" class="icon fas fa-angle-down">Our Projects</a>
 							<ul>
-								<li><a href="locations.html">Locations We Service</a></li>
 								<li><a href="residential.html">Residential</a></li>
 								<li><a href="commercial.html">Commercial</a></li>
-								<li><a href="about.html">Who We Are</a></li>
+
 							</ul>
 						</li>
+						<li><a href="locations.html">Locations We Service</a></li>
 						<li><a href="contact.html" class="button">Contact Our Team</a></li>
 					</ul>
 				</nav>
@@ -73,25 +74,20 @@
 		<script src="assets/js/main.js"></script>
 		<script>
 			document.addEventListener("DOMContentLoaded", function () {
-				const video = document.getElementById("about-video");
-				const fallbackImage = document.querySelector(".fallback-image");
+    			const video = document.querySelector(".video-container video");
+    			const fallbackImage = document.querySelector(".video-container img.fallback-image");
 
-				if (video) {
-					video.setAttribute("playsinline", "");
-					video.setAttribute("muted", "");
-
-					video.play().then(() => {
-						if (fallbackImage) {
-							fallbackImage.style.display = "none";
-						}
-					}).catch((err) => {
-						console.error("Autoplay failed: ", err);
-						if (fallbackImage) {
-							fallbackImage.style.display = "block";
-						}
-					});
-				}
-			});
+    			if (video) {
+        			video.play().catch((err) => {
+            			console.error("Video autoplay failed: ", err);
+           				 if (fallbackImage) {
+               				 fallbackImage.style.display = "block"; // Show the fallback image
+           		 }
+       		 });
+   			 } else if (fallbackImage) {
+     			   fallbackImage.style.display = "block"; // Show the fallback image if video is absent
+  				  }
+		});
 		</script>
 	</body>
 </html>
