@@ -3154,6 +3154,8 @@
             z-index: 1; /* Keep it above the video or image */
             max-width: 400px; /* Set a reasonable max width for the logo */
             margin-bottom: 0px; /* Adjust spacing below the logo */
+            background: linear-gradient(135deg, rgba(242, 242, 242, 0.8), rgba(230, 230, 230, 0.8)); /* Transparent silvery cloud effect */
+
         }
         #banner img {
             position: relative;
@@ -3274,10 +3276,12 @@
     #banner .logo {
         max-width: 120%; /* Scale the logo down for mobile */
         margin-bottom: 0px; /* Space below the logo */
+
+
     }
 
     #banner h3 {
-        font-size: 3rem; /* Adjust font size for smaller screens */
+        font-size: 3.2rem; /* Adjust font size for smaller screens */
         margin-bottom: 10px;
     }
 
@@ -4064,5 +4068,12 @@
         border-radius: 8px; /* Smooth edges */
         display: inline-block; /* Ensure the background wraps tightly around the logo */
         backdrop-filter: blur(4px); /* Adds a subtle blur effect to enhance the logo */
+    }
+}
+@media (max-width: 768px) {
+    #banner h3 {
+        font-size: 3.2rem; /* Adjust font size for smaller screens */
+        font-weight: 500; /* Ensure boldness on mobile */
+        margin-bottom: 10px;
     }
 }
