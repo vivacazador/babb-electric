@@ -3152,7 +3152,7 @@
         #banner .logo {
             position: relative;
             z-index: 1; /* Keep it above the video or image */
-            max-width: 400px; /* Set a reasonable max width for the logo */
+            max-width: 1000px; /* Set a reasonable max width for the logo */
             margin-bottom: 0px; /* Adjust spacing below the logo */
             background: linear-gradient(135deg, rgba(242, 242, 242, 0.8), rgba(230, 230, 230, 0.8)); /* Transparent silvery cloud effect */
 
